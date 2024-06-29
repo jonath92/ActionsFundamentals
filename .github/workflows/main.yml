@@ -8,6 +8,6 @@ jobs:
     runs-on: "ubuntu-22.04"
     steps:
       - run: | 
-          echo "::notice file=README.md,line=1,col=5,endColumn=7::Missing semicolon"
+          echo "::notice file=README.md,line=1,endLine=2,col=5,endColumn=7,title=test::Missing semicolon"
       - run: | 
           echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
