@@ -1,4 +1,4 @@
-name: my-first-action
+name: add-annotations
 
 on: 
   pull_request: 
@@ -13,5 +13,5 @@ jobs:
       - run: |
           echo "::warning file=CheatSheet.md,line=2,endLine=5,title=Warning::Linting error"
       - run: |
-          echo "::error file=CheatSheet.md,line=7,col=1; endColumn=5::Error: Invalid syntax"    
+          echo "::error file=CheatSheet.md,line=7,col=1;title=Error, endColumn=5::Error: Invalid syntax"    
 
