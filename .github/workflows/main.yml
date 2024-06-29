@@ -11,7 +11,7 @@ jobs:
       - run: | 
           echo "::notice file=CheatSheet.md,line=1,title=Notice::Formatting issue"
       - run: |
-          echo "::warning file=CheatSheet.md,line=2,endLine=5,col=5,endColumn=10,title=Warning::Linting error"
+          echo "::warning file=CheatSheet.md,line=2,endLine=5,title=Warning::Linting error"
       - run: |
-          echo "::error file=CheatSheet.md,line=5,col=5::Error: Invalid syntax"    
+          echo "::error file=CheatSheet.md,line=7,col=1; endColumn=5::Error: Invalid syntax"    
 
