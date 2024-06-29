@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: | 
-          echo "::notice file=CheatSheet.md,line=1,title=Notice::Missing semicolon"
+          echo "::notice file=CheatSheet.md,line=1,title=Notice::Formatting issue"
       - run: |
-          echo "::warning file=CheatSheet.md,line=10,endline=12,col=5,endColumn=10,title=Warning::Wrong variable name"
-      # - run: | 
-      #     echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "::warning file=CheatSheet.md,line=2,endLine=5,col=5,endColumn=10,title=Warning::Linting error"
+      - run: |
+          echo "::error file=CheatSheet.md,line=5,col=5::Error: Invalid syntax"    
 
