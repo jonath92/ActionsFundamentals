@@ -35,6 +35,7 @@ Please follow [these instructions](GettingReady.md) and make sure you have set u
 - [ ] GitHub Actions
 - [ ] Types of Actions
 - [ ] 🔨 Hands-on: [My first container Action](hol/02-My-first-action.md)
+- [ ] 🔨 Hands-on: [Use Github CLI](hol/03-Use-GitHub-CLI.md)
 - [ ] Typescript and composite actions
 - [ ] Sharing and releasing actions
 - [ ] Using the GitHub API and Octokit
