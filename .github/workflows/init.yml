@@ -1,6 +1,6 @@
 name: Init
 
-on: [create, workflow_dispatch]
+on: [workflow_dispatch]
 
 permissions: 
   issues: write
