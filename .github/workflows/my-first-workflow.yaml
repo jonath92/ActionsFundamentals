@@ -1,0 +1,75 @@
+# This is a basic workflow to help you get started with Actions
+
+name: first workflow
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: [.github/**]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "8 9 * * *"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: environment
+        required: true
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
+
+      - uses: actions/checkout@v4
+
+      - name: List files in the repository
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
+  Test:
+      runs-on: ubuntu-latest
+      if: github.event_name == 'workflow_dispatch'
+      needs: Build
+      environment: Test
+      steps:
+        - run: echo "🧪 Testing..."
+
+  Load-Test:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    needs: Build
+    environment: Load-Test
+    steps:
+      - run: |
+          echo "🧪 Testing..."
+          sleep 15
+
+  Production:
+    runs-on: ubuntu-latest
+    needs: [Test, Load-Test]
+    environment:
+      name: Production
+      url: https://writeabout.net
+    if: github.event.inputs.environment == 'Production'
+    steps:
+      - run: |
+          echo "🚀 Step 1..."
+          sleep 10
+      - run: |
+          echo "🚀 Step 2..."
+          sleep 10
+      - run: |
+          echo "🚀 Step 3..."
+          sleep 10
+      - run: |
+          echo "🚀 Step 4..."
+          sleep 10
+      - run: |
+          echo "🚀 Step 5..."
+          sleep 10
