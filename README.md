@@ -35,6 +35,7 @@ Please follow [these instructions](GettingReady.md) and make sure you have set u
 - [ ] GitHub Actions
 - [ ] Types of Actions
 - [ ] 🔨 Hands-on: [My first container Action](hol/02-My-first-action.md)
+- [ ] 🔨 Hands-on: [Use Github CLI](hol/03-Use-GitHub-CLI.md)
 - [ ] Typescript and composite actions
 - [ ] Sharing and releasing actions
 - [ ] Using the GitHub API and Octokit
@@ -46,12 +47,12 @@ Please follow [these instructions](GettingReady.md) and make sure you have set u
 - [ ] Permissions for GitHub Token
 - [ ] Environments and Secrets
 - [ ] Staged deployments with environments, approvals, and deployment gates
-- [ ] 🔨 Hands-on: [Staged deployments](hol/03-Staged-deployments.md)
+- [ ] 🔨 Hands-on: [Staged deployments](hol/04-Staged-deployments.md)
 - [ ] :coffee: Break
 - [ ] Action policies
 - [ ] Running your workflows
 - [ ] Sharing workflows
-- [ ] 🔨 Hands-on: [Reusable workflows](hol/04-Reusable-workflows.md)
+- [ ] 🔨 Hands-on: [Reusable workflows](hol/05-Reusable-workflows.md)
 - [ ] Best practices and security
 
 
@@ -67,4 +68,8 @@ For this workshop you need the following:
 
 ## Cheat Sheet
 Find common terminology for reference [here](./CheatSheet.md)
+
+
+
+
 
